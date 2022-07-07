@@ -1,0 +1,132 @@
+.signinScreen__btn {
+	position: relative;
+	padding: 10px 20px;
+	margin-top: 2em;
+	width: 100%;
+	font-size: 1rem;
+	color: white;
+	background-color: #e50914;
+	cursor: pointer;
+	border: none;
+	font-weight: 700;
+	border-radius: 5px;
+}
+
+.signinScreen__btn:hover {
+	background-color: #be0711;
+	transform: scale(0.95);
+}
+
+.signinScreen__gradient {
+	width: 100%;
+	z-index: 1;
+	height: 100vh;
+	background: rgba(0, 0, 0, 0.5);
+	background-image: linear-gradient(
+		to top,
+		rgba(0, 0, 0, 0.4) 0,
+		rgba(0, 0, 0, 0.2) 25%,
+		rgba(0, 0, 0, 0) 50%,
+		rgba(0, 0, 0, 0.2) 75%,
+		rgba(0, 0, 0, 0.4) 100%
+	);
+}
+
+.signinScreen__form {
+	display: flex;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	flex-direction: column;
+	opacity: 1;
+	z-index: 2;
+	width: 500px;
+	height: 600px;
+	min-width: 100px;
+	max-height: 500px;
+	padding: 20px 40px 40px 40px;
+	border-radius: 6px;
+	background-color: rgba($color: rgb(4, 4, 4), $alpha: 0.8);
+	box-shadow: 4px 2px 5px rgb(91, 90, 90);
+}
+
+.signinScreen__title {
+	color: #f2f2f2;
+	font-size: 2rem;
+	margin-bottom: 1.5em;
+}
+
+.signinScreen__signin {
+	margin: 1em 0;
+	width: 100%;
+}
+
+.signinScreen__input {
+	width: 100%;
+	padding: 1em, 1.2em;
+	border-radius: 5px;
+	background-color: #333;
+	color: #f2f2f2;
+	font-size: 20px;
+	outline: none;
+	transition: all 0.2s ease-out;
+}
+
+.signinScreem__input > input {
+	padding: 10px;
+}
+
+.signinScreen__btnGuest {
+	position: relative;
+	padding: 10px 20px;
+	margin-top: 2em;
+	width: 100%;
+	font-size: 1rem;
+	color: white;
+	background-color: transparent;
+	cursor: pointer;
+	border: none;
+	font-weight: 700;
+	border-radius: 5px;
+	border: 1px solid #d9d9d9;
+}
+
+.signinScreen__btnGuest:hover {
+	transform: scale(0.95);
+	border: 1px solid #e50914;
+	color: #e50914;
+}
+
+.signinScreen__divider {
+	margin: 1.5rem;
+	border-color: #777;
+}
+
+.signinScreen__signup {
+	font-size: 25px;
+	color: #747474;
+	text-align: center;
+	line-height: 1.4;
+}
+
+.signinScreen__signup span {
+	margin-left: 0.3em;
+}
+
+.signupScreen__btn {
+	display: contents;
+	color: #e50914;
+	font-weight: 700;
+	line-height: 1.4;
+	font-size: 1em;
+	cursor: pointer;
+}
+
+.signupScreen__btn:hover {
+	color: #be0711;
+}
+
+.signupScreen__body {
+	margin-top: -50%;
+}

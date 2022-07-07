@@ -1,38 +1,31 @@
-.App {
-  text-align: center;
+.app {
+	background-color: #000000;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* .row__posters:focus-within .card__slider .card__poster img,
+.row__posters:focus,
+.card__poster .card__slider img {
+	transform: translate(-25%);
+	z-index: 1;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
+.card__slider > .card__poster > img:focus ~ .card__slider > .card__poster > img,
+.card__slider
+	> .card__poster
+	> img:hover
+	~ .card__slider
+	> .card__poster
+	> img {
+	transform: translateX(25%);
+} */
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+/* .row__posters .card__poster:focus,
+.row__posters .card__poster:hover {
+	transform: scale(1.5);
+	z-index: 2;
+	background-color: #212121;
+	box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+		0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.5),
+		0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+		0 100px 80px rgba(0, 0, 0, 0.5);
+} */

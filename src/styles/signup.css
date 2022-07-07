@@ -1,0 +1,61 @@
+.signinScreen__btn {
+  position: relative;
+  padding: 10px 20px;
+  margin-top: 2em;
+  width: 100%;
+  font-size: 1rem;
+  color: white;
+  background-color: #e50914;
+  cursor: pointer;
+  border: none;
+  font-weight: 700;
+  border-radius: 5px;
+}
+
+.signinScreen__btn:hover {
+  background-color: #be0711;
+  -webkit-transform: scale(0.95);
+          transform: scale(0.95);
+}
+
+.signinScreen__form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  opacity: 1;
+  z-index: 2;
+  width: 500px;
+  height: 600px;
+  min-width: 100px;
+  max-height: 500px;
+  padding: 20px 40px 40px 40px;
+  border-radius: 6px;
+  background-color: rgba(4, 4, 4, 0.8);
+  -webkit-box-shadow: 4px 2px 5px #5b5a5a;
+          box-shadow: 4px 2px 5px #5b5a5a;
+}
+
+.signinScreen__title {
+  color: #f2f2f2;
+  font-size: 2rem;
+  margin-bottom: 1.5em;
+}
+
+.signinScreen__signin {
+  margin: 1em 0;
+  width: 100%;
+}
+
+.signinScreem__input > input {
+  padding: 10px;
+}
+/*# sourceMappingURL=signup.css.map */

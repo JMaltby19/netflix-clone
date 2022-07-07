@@ -1,0 +1,37 @@
+.nav__avatar {
+	position: fixed;
+	right: 20px;
+	width: 30px;
+	height: 30px;
+	cursor: pointer;
+}
+
+.nav__dropdown {
+	display: none;
+}
+
+.nav__dropdown {
+	position: absolute;
+	color: white;
+	position: fixed;
+	right: 20px;
+	top: 50px;
+	width: 200px;
+	height: 80px;
+	cursor: pointer;
+	background-color: black;
+	z-index: 99;
+}
+
+.nav__avatar:hover ~ .nav__dropdown,
+.nav__dropdown:hover {
+	display: block;
+}
+
+.nav__dropdown-item {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	width: 150px;
+	padding: 10px 0 10px 0;
+}

@@ -1,0 +1,26 @@
+.profileScreen {
+	display: relative;
+	height: 100vh;
+}
+
+.profileScreen__info {
+	position: relative;
+	display: flex;
+	margin: 2em;
+	padding: 1em;
+
+	top: 10vh;
+
+	img {
+		height: 8em;
+	}
+	.profileScreen__user {
+		position: relative;
+		color: white;
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+		grid-column-gap: 1r em;
+		grid-row-gap: 2rem;
+		padding: 1em;
+	}
+}

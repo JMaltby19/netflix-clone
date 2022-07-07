@@ -1,0 +1,24 @@
+.filter__container {
+	position: absolute;
+	padding-top: 100px;
+	padding-left: 40px;
+	z-index: 98;
+}
+
+.filter__container button {
+	margin-right: 2em;
+	min-width: 5em;
+	padding: 0.5em 1em;
+	border: none;
+	background-color: #e50914;
+	color: white;
+	border-radius: 1em;
+	font-weight: bold;
+	cursor: pointer;
+	z-index: 99;
+}
+
+button.active {
+	background: white;
+	color: #e50914;
+}

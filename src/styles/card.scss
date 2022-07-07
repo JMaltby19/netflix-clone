@@ -1,0 +1,133 @@
+.card__slider {
+	position: relative;
+	display: flex;
+	align-content: center;
+	// top: 10px;
+}
+
+.card__sliderLarge {
+	top: 30px;
+}
+
+.card__poster {
+	display: block;
+	object-fit: contain;
+	margin-right: 1.6rem;
+	width: 14em;
+	transition: transform 0.5s;
+	z-index: 1;
+	border-radius: 1em;
+
+	&:hover {
+		transform: scale(1.2);
+		z-index: 5;
+	}
+}
+
+.card__posterLarge {
+	max-height: 500px;
+	width: 10em;
+
+	&:hover {
+		transform: scale(1.2);
+		opacity: 1;
+		z-index: 2;
+	}
+}
+
+// MODAL
+.card__title {
+	position: relative;
+	font-size: 1.5em;
+	top: 100%;
+	z-index: 99;
+	margin: 0.5em 0.5em 1em 0.5em;
+}
+
+.card__img {
+	position: absolute;
+	width: 100%;
+	height: 65%;
+	border-radius: 0.5em;
+	z-index: 99;
+}
+
+.card__desc {
+	position: relative;
+	font-size: 0.8em;
+	font-weight: 500;
+	top: 100%;
+	margin: 0.5em 0.5em 1em 1em;
+}
+
+.card__genres {
+	position: relative;
+	top: 100%;
+	color: rgb(140, 140, 140);
+	font-size: 0.8em;
+	font-weight: 400;
+	z-index: 100;
+	margin: 0.5em 0.5em 1em 1em;
+}
+
+.card__date {
+	position: relative;
+	top: 100%;
+	color: rgb(140, 140, 140);
+	font-weight: 400;
+	z-index: 100;
+	margin: 0.5em 0.5em 1em 0.5em;
+}
+
+.card__avVote {
+	position: relative;
+	top: 100%;
+	color: rgb(140, 140, 140);
+	font-weight: 400;
+	z-index: 100;
+	margin: 0.5em 0.5em 1em 1em;
+	font-size: 0.8em;
+}
+.card__lang {
+	position: relative;
+	top: 100%;
+	color: rgb(140, 140, 140);
+	font-weight: 400;
+	z-index: 100;
+	margin: 0.5em 0.5em 1em 1em;
+	font-size: 0.8em;
+
+	hr {
+		opacity: 0;
+		margin: 1em;
+	}
+}
+
+.close__btn {
+	position: absolute;
+	right: 2em;
+	top: 1em;
+	z-index: 100;
+	height: 2em;
+	width: 2em;
+	color: hsla(0, 0%, 66%, 0.9);
+
+	&:hover {
+		color: hsl(0, 0%, 100%);
+		border: hsl(0, 0%, 0%);
+	}
+}
+
+.add__btn {
+	position: absolute;
+	left: 0.5em;
+	bottom: 40%;
+	z-index: 100;
+	width: 4em;
+	color: hsla(0, 0%, 66%, 0.6);
+
+	&:hover {
+		color: hsl(0, 0%, 100%);
+		border: hsl(0, 0%, 0%);
+	}
+}

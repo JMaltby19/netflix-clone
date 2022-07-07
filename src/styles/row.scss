@@ -1,0 +1,54 @@
+.row {
+	color: white;
+	margin-left: 20px;
+	height: 16em;
+}
+
+.rowLarge {
+	margin-top: 2em;
+	height: 28em;
+	padding-top: 1em;
+}
+
+.row__posters {
+	display: flex;
+	align-items: center;
+	overflow-y: hidden;
+	overflow-x: scroll;
+	// padding: 2em;
+	scrollbar-width: none;
+	height: 15em;
+	margin-left: 2em;
+	z-index: 1; // border-radius: 1rem;
+}
+
+.row__postersLarge {
+	height: 22em;
+}
+
+// .card__poster {
+// 	position: relative;
+// 	display: block;
+// 	flex: 1 1 0px;
+// 	transition: transform 500ms;
+// }
+
+// .row__posters .card__poster:focus,
+// .row__posters .card__poster:hover {
+// 	transform: scale(1.15);
+// }
+
+.row__posters::-webkit-scrollbar {
+	display: none;
+}
+
+.row__title {
+	font-size: 1.6rem;
+	font-weight: 800;
+}
+
+.row__slide {
+	position: relative;
+	display: flex;
+	align-items: center;
+}

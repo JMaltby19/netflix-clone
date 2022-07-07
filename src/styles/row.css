@@ -1,0 +1,58 @@
+.row {
+  color: white;
+  margin-left: 20px;
+  height: 100%;
+}
+
+.row__posters {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow-y: hidden;
+  overflow-x: scroll;
+  padding: 20px;
+  scrollbar-width: none;
+  height: 400px;
+  z-index: 1;
+  border-radius: 39px;
+}
+
+.card__poster {
+  position: relative;
+  display: block;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 0px;
+          flex: 1 1 0px;
+  -webkit-transition: -webkit-transform 500ms;
+  transition: -webkit-transform 500ms;
+  transition: transform 500ms;
+  transition: transform 500ms, -webkit-transform 500ms;
+}
+
+.row__posters:focus-within .card__poster,
+.row__posters:hover .card__poster {
+  -webkit-transform: translateX(-25%);
+          transform: translateX(-25%);
+}
+
+.card__poster:focus ~ :nth-child(2),
+.card__poster:focus ~ :nth-child(2) {
+  -webkit-transform: translateX(25%);
+          transform: translateX(25%);
+}
+
+.row__posters .card__poster:focus,
+.row__posters .card__poster:hover {
+  -webkit-transform: scale(1.3);
+          transform: scale(1.3);
+}
+
+.row__posters::-webkit-scrollbar {
+  display: none;
+}
+
+.row__title {
+  font-size: 1rem;
+  font-weight: 800;
+}
+/*# sourceMappingURL=row.css.map */
