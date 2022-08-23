@@ -1,12 +1,10 @@
 import React, { useState, useEffect } from "react";
-import { Card } from "./Card";
-import "../styles/filmfilter.scss";
 import axios from "axios";
+import { Card } from "../../components/Card/Card";
+import "../../styles/filmfilter.scss";
 
-export const FilmFilter = ({ selectedGenre }) => {
+export const SeriesFilter = ({ selectedGenre, favourites, setFavourites }) => {
 	const [movies, setMovies] = useState([]);
-	// const [filtered, setFiltered] = useState([]);
-	// const [activeGenre, setActiveGenre] = useState(0);
 
 	useEffect(() => {
 		const getShowList = async () => {
@@ -21,7 +19,6 @@ export const FilmFilter = ({ selectedGenre }) => {
 	}, [selectedGenre]);
 
 	console.log(movies);
-	// console.log(filtered);
 
 	return (
 		<div>
@@ -30,7 +27,13 @@ export const FilmFilter = ({ selectedGenre }) => {
 					{movies
 						.filter((movie) => movie.backdrop_path != null)
 						.map((movie, index) => (
-							<Card className="films__card" key={index} movie={movie} />
+							<Card
+								className="films__card"
+								key={index}
+								movie={movie}
+								favourites={favourites}
+								setFavourites={setFavourites}
+							/>
 						))}
 				</div>
 			</div>

@@ -1,15 +1,23 @@
 .profileScreen {
-	display: relative;
+	// position: relative;
 	height: 100vh;
+	max-width: fit-content;
+	// margin-bottom: 200px;
+}
+
+.profileScreen__body {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .profileScreen__info {
 	position: relative;
 	display: flex;
-	margin: 2em;
-	padding: 1em;
-
-	top: 10vh;
+	margin: 4em;
+	padding: 2em;
+	top: 8vh;
 
 	img {
 		height: 8em;
@@ -18,9 +26,23 @@
 		position: relative;
 		color: white;
 		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-		grid-column-gap: 1r em;
-		grid-row-gap: 2rem;
+		grid-template-columns: repeat(auto-fit, minmax(30em, 1fr));
+		grid-column-gap: 1em;
+		grid-row-gap: 2em;
 		padding: 1em;
 	}
+}
+
+.profile__delete {
+	position: relative;
+	left: 20em;
+	width: 15%;
+	height: 2.5em;
+	font-size: 0.8rem;
+	color: white;
+	background-color: #e50914;
+	cursor: pointer;
+	border: none;
+	font-weight: 700;
+	border-radius: 5px;
 }

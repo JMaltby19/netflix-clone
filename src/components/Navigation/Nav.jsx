@@ -1,20 +1,22 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect } from "react";
 import "../../styles/nav.scss";
 import netflix__logo from "../../assets/net__logo.png";
 import { useHistory } from "react-router-dom";
 import { Link } from "react-router-dom";
 import { NavProfile } from "./NavProfile";
 import { Search } from "./Search";
-import axios from "axios";
-import { searchURL } from "../../config";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCaretDown } from "@fortawesome/free-solid-svg-icons";
+import { useClickOutside } from "../../utils";
 
 export const Nav = ({ setShowList, searchInput, setSearchInput, enter }) => {
 	const [show, setShow] = useState(false);
+	const [openNav, setOpenNav] = useState(false);
 
-	//const history = useHistory();
+	const history = useHistory();
 
 	const navBarTransition = () => {
-		if (window.scrollY > 100 ? setShow(true) : setShow(false));
+		if (window.scrollY > 30 ? setShow(true) : setShow(false));
 	};
 
 	useEffect(() => {
@@ -22,22 +24,31 @@ export const Nav = ({ setShowList, searchInput, setSearchInput, enter }) => {
 		return () => window.removeEventListener("scroll", navBarTransition);
 	}, []);
 
+	let clickRef = useClickOutside(() => {
+		setOpenNav(false);
+	});
+
 	return (
 		<div className={`nav ${show && "nav__black"}`}>
 			<div className="nav__cnts">
-				{/* <img
+				<img
 					onClick={() => history.push("/home")}
 					className="nav__logo"
 					src={netflix__logo}
 					alt=""
-				/> */}
+				/>
 				<div className="nav__dropdown-trigger">
 					<NavProfile />
 				</div>
 			</div>
-
+			<button className="nav__btn" onClick={() => setOpenNav(!openNav)}>
+				Browse{"  "}
+				<span>
+					<FontAwesomeIcon icon={faCaretDown} />
+				</span>
+			</button>
 			<nav>
-				<ul className="nav__menu">
+				<ul ref={clickRef} className={`nav__menu ${openNav && "open"}`}>
 					<li>
 						<Link to="/home">Home</Link>
 					</li>

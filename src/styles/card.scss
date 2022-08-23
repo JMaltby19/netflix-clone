@@ -7,13 +7,15 @@
 
 .card__sliderLarge {
 	top: 30px;
+	padding-bottom: 2em;
 }
 
 .card__poster {
 	display: block;
 	object-fit: contain;
 	margin-right: 1.6rem;
-	width: 14em;
+	margin-left: 2em;
+	width: clamp(10em, 0.2em + 20vw, 14em);
 	transition: transform 0.5s;
 	z-index: 1;
 	border-radius: 1em;
@@ -26,7 +28,7 @@
 
 .card__posterLarge {
 	max-height: 500px;
-	width: 10em;
+	width: clamp(8em, 0.2em + 15vw, 10em);
 
 	&:hover {
 		transform: scale(1.2);
@@ -123,8 +125,30 @@
 	left: 0.5em;
 	bottom: 40%;
 	z-index: 100;
-	width: 4em;
+	height: 2em;
 	color: hsla(0, 0%, 66%, 0.6);
+
+	// div .card__btn {
+	// 	height: 2em;
+	// }
+
+	&:hover {
+		color: hsl(0, 0%, 100%);
+		border: hsl(0, 0%, 0%);
+	}
+}
+
+.remove__btn {
+	position: absolute;
+	left: 4em;
+	bottom: 40%;
+	z-index: 100;
+	height: 2em;
+	color: hsla(0, 0%, 66%, 0.6);
+
+	// div .card__btn {
+	// 	height: 2em;
+	// }
 
 	&:hover {
 		color: hsl(0, 0%, 100%);

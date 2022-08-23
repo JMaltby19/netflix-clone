@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import "../styles/profileloader.scss";
-import netflix_logo from "../assets/netflix__logo.png";
-import netflix_avatar from "../assets/netflix_avatar.png";
+import "../../styles/profileloader.scss";
+import netflix_logo from "../../assets/netflix__logo.png";
+import netflix_avatar from "../../assets/netflix_avatar.png";
 import { useHistory } from "react-router";
 
 export const ProfileLoader = (email) => {
@@ -12,24 +12,13 @@ export const ProfileLoader = (email) => {
 
 	const getProfile = async () => {
 		try {
-			const response = await axios.get(
-				`http://localhost:6001/get/${localStorage.getItem("email")}`,
-				{
-					headers: { token: localStorage.getItem("token") },
-				}
-			);
+			const response = await axios.get(`http://localhost:6001/get`, {
+				headers: { token: localStorage.getItem("token") },
+			});
 
 			console.log(response);
 
 			setGetData({ userProfile: response.data.payload[0] });
-
-			// console.log(getData);
-
-			if (response.data.status === 1) {
-				return response.data.payload;
-			} else {
-				return response.data.status;
-			}
 		} catch (error) {
 			console.log(error);
 		}

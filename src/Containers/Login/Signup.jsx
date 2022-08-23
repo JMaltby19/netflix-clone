@@ -1,18 +1,11 @@
 import axios from "axios";
 import React, { useState } from "react";
-import "../styles/signup.scss";
-import { useHistory } from "react-router";
+import "../../styles/signup.scss";
 
-export const Signup = () => {
+export const Signup = ({ setSignUp }) => {
 	const [input, setInput] = useState({});
 
 	const { user_name, email, password } = input;
-
-	const history = useHistory();
-
-	// const onInput = (e) => {
-	// 	setInput({ [e.target.name]: e.target.value });
-	// };
 
 	const onSubmit = async (e) => {
 		e.preventDefault();
@@ -20,7 +13,7 @@ export const Signup = () => {
 			const response = await axios.post("http://localhost:6001/add", input);
 
 			if (response.data.status) {
-				history.push("/");
+				setSignUp(false);
 				return true;
 			} else {
 				return { error: response.data.error };

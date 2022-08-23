@@ -4,7 +4,7 @@
 	padding: 20px;
 	width: 100%;
 	height: 70px;
-	z-index: 99;
+	z-index: 10;
 	background-color: 1;
 
 	// Animations
@@ -35,16 +35,42 @@
 }
 
 .nav__menu {
+	display: none;
+}
+
+.nav__btn {
 	display: flex;
 	position: absolute;
-	align-items: center;
 	background: none;
-	justify-content: space-between;
-	width: 40vw;
-	margin-left: 8em;
-	cursor: pointer;
-	z-index: 4;
+	left: 8em;
+	top: 2em;
+	color: white;
+	background: transparent;
+	border: none;
 
+	span {
+		padding-left: 0.5em;
+	}
+}
+
+@media only screen and (max-width: 1000px) {
+	.nav__menu {
+		position: absolute;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+		transform: translateX(-120%);
+		width: 12em;
+		background-color: rgba(17, 17, 17, 0.8);
+		padding: 0;
+		z-index: 99;
+	}
+
+	.nav__menu.open {
+		transform: translate(70%, 40%);
+		z-index: 99;
+	}
 	li {
 		display: block;
 		font-weight: 700;
@@ -64,20 +90,92 @@
 			color: rgb(190, 190, 190);
 		}
 	}
+
+	.nav__logo {
+		position: fixed;
+		left: 0;
+		top: 10px;
+		width: 110px;
+		cursor: pointer;
+		padding-left: 20px;
+		object-fit: contain;
+	}
+
+	.nav__search {
+		position: fixed;
+		top: 20px;
+		right: 0;
+		width: 220px;
+		transition: all 0.5s;
+		// display: flex;
+		// justify-content: center;
+		// align-items: center;
+		z-index: 1;
+	}
 }
 
-.nav__search {
-	position: absolute;
-	top: 20px;
-	right: 50px;
-	width: 250px;
-	transition: all 0.5s;
-	display: flex;
-	justify-content: center;
-	align-items: center;
+@media only screen and (min-width: 1001px) {
+	.nav__btn {
+		display: none;
+	}
+	.nav__menu {
+		display: flex;
+		position: absolute;
+		align-items: center;
+		background: none;
+		justify-content: space-between;
+		width: 40vw;
+		margin-left: 8em;
+		cursor: pointer;
+		z-index: 4;
+
+		li {
+			display: block;
+			font-weight: 700;
+			text-align: center;
+			padding: 5px 0;
+
+			a {
+				text-decoration: none;
+				color: rgb(226, 226, 226);
+			}
+		}
+
+		li:hover {
+			transform: scale(1.2);
+			transition: all 0.5;
+			a {
+				color: rgb(190, 190, 190);
+			}
+		}
+	}
+
+	.nav__search {
+		position: fixed;
+		top: 20px;
+		right: 70px;
+		width: 220px;
+		transition: all 0.5s;
+		// display: flex;
+		// justify-content: center;
+		// align-items: center;
+		z-index: 1;
+	}
 }
+
+// .nav__search {
+// 	position: fixed;
+// 	top: 20px;
+// 	right: 70px;
+// 	width: 220px;
+// 	transition: all 0.5s;
+// 	// display: flex;
+// 	// justify-content: center;
+// 	// align-items: center;
+// 	z-index: 1;
+// }
 
 .nav__black {
 	background-color: black;
-	z-index: 99;
+	z-index: 97;
 }

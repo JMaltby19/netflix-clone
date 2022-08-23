@@ -1,17 +1,18 @@
 import React, { useState } from "react";
-import { IMG_URL } from "../config";
-import "../styles/card.scss";
+import { IMG_URL } from "../../config";
+import "../../styles/card.scss";
 import { motion } from "framer-motion";
 import { Modal } from "./Modal";
-import { genresList } from "../config";
+import { genresList } from "../../config";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircleXmark } from "@fortawesome/free-solid-svg-icons";
-import { AddFavourite } from "./AddFavourite";
+import { faPlusCircle } from "@fortawesome/free-solid-svg-icons";
+import { faMinusCircle } from "@fortawesome/free-solid-svg-icons";
+import { useClickOutside } from "../../utils";
 
-export const Card = ({ movie, largePoster }) => {
+export const Card = ({ movie, largePoster, favourites, setFavourites }) => {
 	const [selectedId, setSelectedId] = useState(false);
-	// const [isToggled, setIsToggled] = useState(false);
-	// const genresConverted = genreList(movie.genre_ids);
+	// const [openCard, setOpenCard] = useState(false);
 
 	const cardClicked = () => {
 		setSelectedId(!selectedId);
@@ -20,6 +21,36 @@ export const Card = ({ movie, largePoster }) => {
 	const capitaliseDate = (str) => {
 		return movie.original_language.charAt(0).toUpperCase() + str.slice(1, 2);
 	};
+
+	const addFavouriteMovie = (movie) => {
+		if (
+			favourites.some((item) => {
+				return movie.name === item.name;
+			})
+		) {
+			return;
+		}
+		const newFavouriteList = [...favourites, movie];
+		setFavourites(newFavouriteList);
+		saveToStorage(newFavouriteList);
+	};
+
+	const saveToStorage = (items) => {
+		localStorage.setItem("Netflix-clone-favourites", JSON.stringify(items));
+	};
+
+	const removeFavouriteMovie = (movie) => {
+		const newFavouriteList = favourites.filter(
+			(favourite) => favourite.id !== movie.id
+		);
+
+		setFavourites(newFavouriteList);
+		saveToStorage(newFavouriteList);
+	};
+
+	let clickRef = useClickOutside(() => {
+		setSelectedId(false);
+	});
 
 	return (
 		<div>
@@ -40,15 +71,28 @@ export const Card = ({ movie, largePoster }) => {
 
 			<Modal selectedId={selectedId} setSelectedId={setSelectedId}>
 				{selectedId && (
-					<motion.div layoutId={movie.id} className="card">
+					<motion.div layoutId={movie.id} ref={clickRef} className="card">
 						<FontAwesomeIcon
 							className="close__btn"
 							icon={faCircleXmark}
 							inverse
 							onClick={() => setSelectedId(false)}
 						/>
-						<motion.div className="add__btn">
-							<AddFavourite />
+						<motion.div>
+							<FontAwesomeIcon
+								className="add__btn"
+								icon={faPlusCircle}
+								// style={{ width: "2em" }}
+								onClick={() => addFavouriteMovie(movie)}
+							/>
+						</motion.div>
+						<motion.div>
+							<FontAwesomeIcon
+								className="remove__btn"
+								icon={faMinusCircle}
+								// style={{ width: "2em" }}
+								onClick={() => removeFavouriteMovie(movie)}
+							/>
 						</motion.div>
 						<motion.div
 							className="card__img"

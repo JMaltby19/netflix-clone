@@ -1,8 +1,13 @@
 .films {
 	position: relative;
-	// max-height: 200vh;
-	height: 150vh;
 	padding-top: 100px;
+	padding-bottom: 252px;
+}
+
+.search__result {
+	font-weight: 700;
+	color: white;
+	margin-left: 4em;
 }
 
 .search__posters {

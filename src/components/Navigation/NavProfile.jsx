@@ -8,10 +8,9 @@ export const NavProfile = () => {
 	const history = useHistory();
 
 	const logout = () => {
-		axios.delete(
-			`http://localhost:6001/logout/${localStorage.getItem("email")}`,
-			{ headers: { token: localStorage.getItem("token") } }
-		);
+		axios.delete(`http://localhost:6001/logout`, {
+			headers: { token: localStorage.getItem("token") },
+		});
 
 		localStorage.clear();
 		history.push("/");

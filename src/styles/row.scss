@@ -1,12 +1,13 @@
 .row {
+	// position: relative;
 	color: white;
 	margin-left: 20px;
-	height: 16em;
+	height: clamp(12em, 0.2em + 30vw, 18em);
 }
 
 .rowLarge {
 	margin-top: 2em;
-	height: 28em;
+	height: clamp(20em, 0.2em + 40vw, 28em);
 	padding-top: 1em;
 }
 
@@ -16,34 +17,18 @@
 	overflow-y: hidden;
 	overflow-x: scroll;
 	// padding: 2em;
-	scrollbar-width: none;
-	height: 15em;
-	margin-left: 2em;
+	// scrollbar-width: none;
+	height: clamp(10em, 0.2em + 20vw, 15em);
+	margin-left: 1em;
 	z-index: 1; // border-radius: 1rem;
 }
 
 .row__postersLarge {
-	height: 22em;
-}
-
-// .card__poster {
-// 	position: relative;
-// 	display: block;
-// 	flex: 1 1 0px;
-// 	transition: transform 500ms;
-// }
-
-// .row__posters .card__poster:focus,
-// .row__posters .card__poster:hover {
-// 	transform: scale(1.15);
-// }
-
-.row__posters::-webkit-scrollbar {
-	display: none;
+	height: clamp(16em, 0.2em + 30vw, 22em);
 }
 
 .row__title {
-	font-size: 1.6rem;
+	font-size: clamp(1.2rem, 0.2rem + 2vw, 1.6rem);
 	font-weight: 800;
 }
 

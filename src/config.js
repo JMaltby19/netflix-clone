@@ -1,18 +1,23 @@
+// need to put in env
 export const BASE_URL = "https://api.themoviedb.org/3";
-export const API_KEY = "ac7e0b69f4c211bb928798d979b229d6";
+export const API_KEY = process.env.REACT_APP_API_KEY;
 export const IMG_URL = "https://image.tmdb.org/t/p/original/";
 
-const requests = {
-	Trending: {
-		title: "Trending",
-		url: `${BASE_URL}/trending/all/day?api_key=${API_KEY}&language=en-US`,
+export const requests = {
+	Popular: {
+		title: "Popular",
+		url: `${BASE_URL}/discover/movie/?api_key=${API_KEY}&language=en-US&page=1`,
 	},
 	Netflix: {
 		title: "Netflix",
 		url: `${BASE_URL}/discover/tv?api_key=${API_KEY}&with_networks=213`,
 	},
+	Trending: {
+		title: "Trending",
+		url: `${BASE_URL}/trending/all/day?api_key=${API_KEY}&language=en-US`,
+	},
 	TopRated: {
-		title: "TopRated",
+		title: "Top Rated",
 		url: `${BASE_URL}/movie/top_rated/?api_key=${API_KEY}&language=en-US`,
 	},
 	Action: {
@@ -35,9 +40,64 @@ const requests = {
 		title: "Romance",
 		url: `${BASE_URL}/discover/movie/?api_key=${API_KEY}&with_genres=10749`,
 	},
-	Popular: {
+	Music: {
+		title: "Music",
+		url: `${BASE_URL}/discover/movie/?api_key=${API_KEY}&with_genres=10402`,
+	},
+	Thriller: {
+		title: "Thriller",
+		url: `${BASE_URL}/discover/movie/?api_key=${API_KEY}&with_genres=53`,
+	},
+	Fantasy: {
+		title: "Fantasy",
+		url: `${BASE_URL}/discover/movie/?api_key=${API_KEY}&with_genres=14`,
+	},
+	Animation: {
+		title: "Animation",
+		url: `${BASE_URL}/discover/movie/?api_key=${API_KEY}&with_genres=16`,
+	},
+};
+
+export const seriesRequests = {
+	TvPopular: {
 		title: "Popular",
-		url: `${BASE_URL}/discover/movie/?api_key=${API_KEY}&language=en-US&page=1`,
+		url: `${BASE_URL}/discover/tv?api_key=${API_KEY}&language=en-US&page=1`,
+	},
+	TvAction: {
+		title: "Action",
+		url: `${BASE_URL}/discover/tv?api_key=${API_KEY}&with_genres=10759`,
+	},
+	TvAnimation: {
+		title: "Animation",
+		url: `${BASE_URL}/discover/tv?api_key=${API_KEY}&with_genres=16`,
+	},
+	TvComedy: {
+		title: "Comedy",
+		url: `${BASE_URL}/discover/tv?api_key=${API_KEY}&with_genres=35`,
+	},
+	TvCrime: {
+		title: "Crime",
+		url: `${BASE_URL}/discover/tv?api_key=${API_KEY}&with_genres=80`,
+	},
+	TvDocumentary: {
+		title: "Documentary",
+		url: `${BASE_URL}/discover/tv?api_key=${API_KEY}&with_genres=99`,
+	},
+	TvDrama: {
+		title: "Drama",
+		url: `${BASE_URL}/discover/tv?api_key=${API_KEY}&with_genres=18`,
+	},
+	TvFamily: {
+		title: "Family",
+		url: `${BASE_URL}/discover/tv?api_key=${API_KEY}&with_genres=10751`,
+	},
+	TvMystery: {
+		title: "Mystery",
+		url: `${BASE_URL}/discover/tv?api_key=${API_KEY}&with_genres=9648`,
+	},
+	TvSciFi: {
+		title: "Sci-Fi",
+		url: `${BASE_URL}/discover/tv?api_key=${API_KEY}&with_genres=10765`,
 	},
 };
 
@@ -99,5 +159,3 @@ export const genresList = {
 
 	10768: "War & Politics",
 };
-
-export default requests;

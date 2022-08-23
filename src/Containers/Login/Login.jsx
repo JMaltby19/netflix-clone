@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
 import axios from "axios";
-import "../styles/signin2.scss";
+import "../../styles/signin2.scss";
 
-export const Signin2 = ({ setSignUp }) => {
+export const Login = ({ setSignUp }) => {
 	const [input, setInput] = useState({});
 	// const [errorMessage, setErrorMessage] = useState();
 
@@ -20,7 +20,6 @@ export const Signin2 = ({ setSignUp }) => {
 	};
 
 	const signIn = async () => {
-		console.log("hello");
 		try {
 			const response = await axios.post("http://localhost:6001/login", input);
 
@@ -36,6 +35,10 @@ export const Signin2 = ({ setSignUp }) => {
 		} catch (error) {
 			console.log(error);
 		}
+	};
+
+	const signInAsGuest = () => {
+		history.push("/home");
 	};
 
 	return (
@@ -69,7 +72,9 @@ export const Signin2 = ({ setSignUp }) => {
 				<button onClick={signIn} className="signinScreen__btn">
 					Sign In
 				</button>
-				<button className="signinScreen__btnGuest">Sign In as Guest</button>
+				<button onClick={signInAsGuest} className="signinScreen__btn">
+					Sign In as Guest
+				</button>
 				<hr className="signinScreen__divider" />
 				<small className="signinScreen__signup">
 					Haven't registered yet?

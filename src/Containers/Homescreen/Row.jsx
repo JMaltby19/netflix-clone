@@ -1,12 +1,16 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import { Card } from "./Card";
-import "../styles/row.scss";
-import { MdChevronLeft, MdChevronRight } from "react-icons/md";
+import { Card } from "../../components/Card/Card";
+import "../../styles/row.scss";
 
-export const Row = ({ title, fetchUrl, isLargeRow = false }) => {
+export const Row = ({
+	title,
+	fetchUrl,
+	isLargeRow = false,
+	favourites,
+	setFavourites,
+}) => {
 	const [movies, setMovies] = useState([]);
-	// const [selectedId, setSelectedId] = useState(null);
 
 	useEffect(() => {
 		const getShowList = async () => {
@@ -18,7 +22,7 @@ export const Row = ({ title, fetchUrl, isLargeRow = false }) => {
 			}
 		};
 		getShowList();
-	}, [fetchUrl]);
+	}, [fetchUrl, setMovies]);
 
 	console.log(movies);
 
@@ -31,18 +35,22 @@ export const Row = ({ title, fetchUrl, isLargeRow = false }) => {
 					id="slider"
 					className={`row__posters ${isLargeRow && "row__postersLarge"}`}
 				>
-					{movies.map(
-						(movie, index) =>
-							((isLargeRow && movie.poster_path) ||
-								(!isLargeRow && movie.backdrop_path)) && (
-								<Card
-									className="card__poster"
-									key={index}
-									movie={movie}
-									largePoster={isLargeRow}
-								/>
-							)
-					)}
+					{movies
+						.filter((movie) => movie.backdrop_path != null)
+						.map(
+							(movie, index) =>
+								((isLargeRow && movie.poster_path) ||
+									(!isLargeRow && movie.backdrop_path)) && (
+									<Card
+										className="card__poster"
+										key={index}
+										movie={movie}
+										largePoster={isLargeRow}
+										favourites={favourites}
+										setFavourites={setFavourites}
+									/>
+								)
+						)}
 				</div>
 				{/* <MdChevronRight size={40} /> */}
 			</div>

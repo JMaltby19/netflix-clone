@@ -1,27 +1,25 @@
-import React from "react";
+import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import "../../styles/search.scss";
+import { useClickOutside } from "../../utils";
 
-export const Search = ({
-	showList,
-	setShowList,
-	searchInput,
-	setSearchInput,
-	enter,
-}) => {
-	// const [movies, setMovies] = useState([]);
+export const Search = ({ searchInput, setSearchInput, enter }) => {
+	const [openSearch, setOpenSearch] = useState(false);
 
 	const handleInput = (e) => {
-		// console.log("Hello", typeof setInput, e.target.value);
 		setSearchInput(e.target.value);
 	};
+
+	let clickRef = useClickOutside(() => {
+		setOpenSearch(false);
+	});
 
 	return (
 		<div className="search__box flex a-center">
 			<input
-				// key={searchInput}
-				// defaultValue={searchInput}
+				className={`search__input ${openSearch && "open"}`}
+				ref={clickRef}
 				type="text"
 				name="query"
 				placeholder="Search..."
@@ -30,7 +28,10 @@ export const Search = ({
 				onKeyUp={enter}
 			/>
 
-			<button className="search__icon">
+			<button
+				className="search__icon"
+				onClick={() => setOpenSearch(!openSearch)}
+			>
 				<FontAwesomeIcon icon={faSearch} />
 			</button>
 
