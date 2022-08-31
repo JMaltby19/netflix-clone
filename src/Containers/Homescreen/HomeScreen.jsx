@@ -23,7 +23,6 @@ export const HomeScreen = ({
 				/>
 
 				{requestsArray.map((item) => {
-					console.log(item, "Hello");
 					return (
 						<Row
 							title={item.title}

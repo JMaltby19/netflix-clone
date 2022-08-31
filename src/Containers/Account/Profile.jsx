@@ -12,19 +12,6 @@ export const Profile = () => {
 
 	const history = useHistory();
 
-	// const fetchProfileDetails = async () => {
-	// 	const result = await getProfileDetails();
-	// 	if (result) {
-	// 		setGetData(result);
-	// 	} else {
-	// 		setGetData("Cannot retrieve your details");
-	// 	}
-	// };
-
-	// useEffect(() => {
-	// 	fetchProfileDetails();
-	// }, []);
-
 	const onUserInput = (e) => {
 		setGetData({ ...getData, [e.target.id]: e.target.value });
 		console.log(getData);
@@ -50,14 +37,6 @@ export const Profile = () => {
 			console.log(response);
 
 			setGetData({ userProfile: response.data.payload[0] });
-
-			// console.log(getData);
-
-			// if (response.data.status === 1) {
-			// 	return response.data.payload;
-			// } else {
-			// 	return response.data.status;
-			// }
 		} catch (error) {
 			console.log(error);
 		}
@@ -68,7 +47,7 @@ export const Profile = () => {
 	}, []);
 
 	const deleteProfile = async () => {
-		const response = await axios.delete(`http://localhost:6001/delete`, {
+		await axios.delete(`http://localhost:6001/delete`, {
 			headers: { token: localStorage.getItem("token") },
 		});
 		localStorage.clear();
