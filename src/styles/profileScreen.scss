@@ -21,6 +21,11 @@
 		align-items: center;
 	}
 
+	input {
+		width: 35em;
+		margin: 0 1em 0 1em;
+	}
+
 	.profile__btn {
 		position: relative;
 		padding: 5px 5px;
@@ -34,4 +39,11 @@
 		font-weight: 700;
 		border-radius: 5px;
 	}
+
+	// .profile__message {
+	// 	position: relative;
+	// 	font-size: 0.8em;
+	// 	bottom: 2em;
+	// 	right: 14.6em;
+	// }
 }

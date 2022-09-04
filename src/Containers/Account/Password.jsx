@@ -19,7 +19,7 @@ export const Password = ({ getData, onUserInput, updateProfile }) => {
 					<input
 						type="text"
 						id="password"
-						placeholder="Enter new password"
+						placeholder="min 8 chars, 1 u-case, 1 l-case, 1 number & 1 (@, $, !, %, *, ?, &)"
 						onInput={(e) => {
 							const test = validatePassword(e);
 							setValidate(test);

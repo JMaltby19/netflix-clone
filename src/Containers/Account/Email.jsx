@@ -19,7 +19,7 @@ export const Email = ({ getData, onUserInput, updateProfile }) => {
 					<input
 						type="text"
 						id="email"
-						placeholder="Enter new email"
+						placeholder="Please enter a valid email address"
 						onInput={(e) => {
 							const test = validateEmail(e);
 							setValidate(test);

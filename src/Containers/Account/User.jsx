@@ -15,11 +15,10 @@ export const User = ({ getData, onUserInput, updateProfile }) => {
 			{update ? (
 				<>
 					<p className="profile__data">{getData.userProfile.user_name}</p>
-
 					<input
 						type="text"
 						id="user_name"
-						placeholder="Enter new user name"
+						placeholder="Username must be between 3 and 12 characters"
 						onInput={(e) => {
 							const test = validateUsername(e);
 							setValidate(test);
@@ -28,6 +27,9 @@ export const User = ({ getData, onUserInput, updateProfile }) => {
 							}
 						}}
 					/>
+					{/* <p className="profile__message">
+						Username must be between 3 and 12 characters
+					</p> */}
 				</>
 			) : (
 				<p className="profile__data">{getData.userProfile.user_name}</p>
