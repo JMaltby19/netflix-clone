@@ -6,6 +6,7 @@ import { useHistory } from "react-router";
 import { Email } from "./Email";
 import { User } from "./User";
 import { Password } from "./Password";
+import { API_URL } from "../../config";
 
 export const Profile = () => {
 	const [getData, setGetData] = useState({});
@@ -19,7 +20,7 @@ export const Profile = () => {
 
 	const updateProfile = async (name) => {
 		await axios.patch(
-			`http://localhost:6001/modify`,
+			`${API_URL}/modify`,
 			{ [name]: getData[name] },
 			{
 				headers: { token: localStorage.getItem("token") },
@@ -30,7 +31,7 @@ export const Profile = () => {
 
 	const getProfileDetails = async () => {
 		try {
-			const response = await axios.get(`http://localhost:6001/get`, {
+			const response = await axios.get(`${API_URL}/get`, {
 				headers: { token: localStorage.getItem("token") },
 			});
 
@@ -47,7 +48,7 @@ export const Profile = () => {
 	}, []);
 
 	const deleteProfile = async () => {
-		await axios.delete(`http://localhost:6001/delete`, {
+		await axios.delete(`${API_URL}/delete`, {
 			headers: { token: localStorage.getItem("token") },
 		});
 		localStorage.clear();
@@ -60,7 +61,7 @@ export const Profile = () => {
 				<div className="profileScreen__body">
 					<h1>Edit Profile</h1>
 					<div className="profileScreen__info">
-						<img src={netflix_avatar} alt="" />
+						<img src={netflix_avatar} alt="" className="profile__img" />
 						<div className="profileScreen__user">
 							<h3>User name: </h3>
 							<User

@@ -3,12 +3,13 @@ import { useHistory } from "react-router-dom";
 import netflix_avatar from "../../assets/netflix_avatar.png";
 import "../../styles/navProfile.scss";
 import axios from "axios";
+import { API_URL } from "../../config";
 
 export const NavProfile = () => {
 	const history = useHistory();
 
 	const logout = () => {
-		axios.delete(`http://localhost:6001/logout`, {
+		axios.delete(`${API_URL}/logout`, {
 			headers: { token: localStorage.getItem("token") },
 		});
 

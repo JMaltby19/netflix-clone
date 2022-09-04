@@ -1,7 +1,6 @@
 .list__container {
 	position: relative;
-	max-height: 200vh;
-	height: 100vh;
+	min-height: 100vh;
 	padding-top: 100px;
 	background-color: black;
 }

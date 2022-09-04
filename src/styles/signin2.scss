@@ -41,10 +41,10 @@
 	flex-direction: column;
 	opacity: 1;
 	z-index: 2;
-	width: 500px;
+	width: clamp(20em, 30%, 50em);
 	height: 600px;
-	min-width: 100px;
-	max-height: 500px;
+	min-width: 50px;
+	max-height: 600px;
 	padding: 20px 40px 40px 40px;
 	border-radius: 6px;
 	background-color: rgba($color: rgb(4, 4, 4), $alpha: 0.8);

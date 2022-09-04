@@ -1,5 +1,6 @@
 import axios from "axios";
 import React, { useState } from "react";
+import { API_URL } from "../../config";
 import "../../styles/signup.scss";
 
 export const Signup = ({ setSignUp }) => {
@@ -10,7 +11,7 @@ export const Signup = ({ setSignUp }) => {
 	const onSubmit = async (e) => {
 		e.preventDefault();
 		try {
-			const response = await axios.post("http://localhost:6001/add", input);
+			const response = await axios.post(`${API_URL}/add`, input);
 
 			if (response.data.status) {
 				setSignUp(false);
@@ -26,7 +27,7 @@ export const Signup = ({ setSignUp }) => {
 	console.log(input);
 
 	return (
-		<div className="signupScreen__body">
+		<div>
 			<div className="signinScreen">
 				<form className="signinScreen__form">
 					<h1 className="signinScreen__title">Sign Up</h1>

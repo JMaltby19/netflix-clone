@@ -11,7 +11,7 @@ export const Signin = () => {
 			{/* <div className="login__bkg"> */}
 			{/* <img className="loginScreen__logo" src={net__logo} alt="" /> */}
 			{!signUp && <Login setSignUp={setSignUp} />}
-			<div className="signinScreen__gradient" />
+			<div />
 
 			{signUp && <Signup setSignUp={setSignUp} />}
 		</div>

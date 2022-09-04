@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
 import axios from "axios";
 import "../../styles/signin2.scss";
+import { API_URL } from "../../config";
 
 export const Login = ({ setSignUp }) => {
 	const [input, setInput] = useState({});
@@ -21,7 +22,7 @@ export const Login = ({ setSignUp }) => {
 
 	const signIn = async () => {
 		try {
-			const response = await axios.post("http://localhost:6001/login", input);
+			const response = await axios.post(`${API_URL}/login`, input);
 
 			console.log(response);
 

@@ -4,6 +4,7 @@ import "../../styles/profileloader.scss";
 import netflix_logo from "../../assets/netflix__logo.png";
 import netflix_avatar from "../../assets/netflix_avatar.png";
 import { useHistory } from "react-router";
+import { API_URL } from "../../config";
 
 export const ProfileLoader = (email) => {
 	const [getData, setGetData] = useState([]);
@@ -12,7 +13,7 @@ export const ProfileLoader = (email) => {
 
 	const getProfile = async () => {
 		try {
-			const response = await axios.get(`http://localhost:6001/get`, {
+			const response = await axios.get(`${API_URL}/get`, {
 				headers: { token: localStorage.getItem("token") },
 			});
 

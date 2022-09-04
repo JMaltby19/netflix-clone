@@ -1,4 +1,4 @@
-@media only screen and (max-width: 699px) {
+@media only screen and (max-width: 768px) {
 	.profile__btn {
 		position: relative;
 		padding: 5px 5px;
@@ -14,7 +14,7 @@
 	}
 }
 
-@media only screen and (min-width: 700px) {
+@media only screen and (min-width: 769px) {
 	.profile__input {
 		display: flex;
 		justify-content: space-between;

@@ -19,8 +19,8 @@ export const FilmFilter = ({ selectedGenre, favourites, setFavourites }) => {
 	}, [selectedGenre]);
 
 	return (
-		<div>
-			<div className="films">
+		<div className="films">
+			<div>
 				<div className="films__posters">
 					{movies
 						.filter((movie) => movie.backdrop_path != null)
