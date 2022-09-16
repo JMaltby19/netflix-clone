@@ -52,26 +52,6 @@ export const Card = ({ movie, largePoster, favourites, setFavourites }) => {
 		setSelectedId(false);
 	});
 
-	const buttonHandler = (movie) => {
-		if (favourites) {
-			return (
-				<FontAwesomeIcon
-					className="add__btn"
-					icon={faPlusCircle}
-					// style={{ width: "2em" }}
-					onClick={() => addFavouriteMovie(movie)}
-				/>
-			);
-		} else {
-			<FontAwesomeIcon
-				className="remove__btn"
-				icon={faMinusCircle}
-				// style={{ width: "2em" }}
-				onClick={() => removeFavouriteMovie(movie)}
-			/>;
-		}
-	};
-
 	return (
 		<div>
 			<div
@@ -116,7 +96,6 @@ export const Card = ({ movie, largePoster, favourites, setFavourites }) => {
 							/>
 							Remove
 						</motion.div>
-						{/* <motion.div>{buttonHandler()}</motion.div> */}
 						<motion.div
 							className="card__img"
 							style={{
