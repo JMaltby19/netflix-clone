@@ -11,12 +11,13 @@ export const Email = ({ getData, onUserInput, updateProfile }) => {
 	};
 
 	return (
-		<div className="profile__input">
+		<div className="profile__data">
 			{update ? (
 				<>
 					<p>{getData.userProfile.email}</p>
 
 					<input
+						className="profile__input"
 						type="text"
 						id="email"
 						placeholder="Please enter a valid email address"

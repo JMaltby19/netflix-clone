@@ -38,12 +38,12 @@ export const Row = ({
 					{movies
 						.filter((movie) => movie.backdrop_path != null)
 						.map(
-							(movie, index) =>
+							(movie) =>
 								((isLargeRow && movie.poster_path) ||
 									(!isLargeRow && movie.backdrop_path)) && (
 									<Card
 										className="card__poster"
-										key={index}
+										key={movie.id}
 										movie={movie}
 										largePoster={isLargeRow}
 										favourites={favourites}

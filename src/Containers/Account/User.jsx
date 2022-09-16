@@ -11,11 +11,12 @@ export const User = ({ getData, onUserInput, updateProfile }) => {
 	};
 
 	return (
-		<div className="profile__input">
+		<div className="profile__data">
 			{update ? (
 				<>
 					<p className="profile__data">{getData.userProfile.user_name}</p>
 					<input
+						className="profile__input"
 						type="text"
 						id="user_name"
 						placeholder="Username must be between 3 and 12 characters"

@@ -11,12 +11,13 @@ export const Password = ({ getData, onUserInput, updateProfile }) => {
 	};
 
 	return (
-		<div className="profile__input">
+		<div className="profile__data">
 			{update ? (
 				<>
 					<p>******</p>
 
 					<input
+						className="profile__input"
 						type="text"
 						id="password"
 						placeholder="min 8 chars, 1 u-case, 1 l-case, 1 number & 1 (@, $, !, %, *, ?, &)"

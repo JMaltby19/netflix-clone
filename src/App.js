@@ -42,7 +42,7 @@ function App() {
 
 	const enter = (e) => {
 		console.log("enter key clicked");
-		if (e.key === "Enter" && searchInput.length > 0) {
+		if (e.key === "Enter" && searchInput.length > 1) {
 			onSearch();
 			e.target.value = "";
 		}

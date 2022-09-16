@@ -25,6 +25,7 @@ export const HomeScreen = ({
 				{requestsArray.map((item) => {
 					return (
 						<Row
+							key={item.id}
 							title={item.title}
 							fetchUrl={item.url}
 							isLargeRow={item.title === "Netflix" ? true : false}

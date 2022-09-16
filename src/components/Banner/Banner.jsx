@@ -27,7 +27,7 @@ export const Banner = ({ movies, setMovies, favourites, setFavourites }) => {
 	const addFavouriteMovie = (movies) => {
 		if (
 			favourites.some((item) => {
-				return movies.name === item.name;
+				return movies.id === item.id;
 			})
 		) {
 			return;
@@ -45,7 +45,7 @@ export const Banner = ({ movies, setMovies, favourites, setFavourites }) => {
 		<div className="banner">
 			<img
 				className="banner__img"
-				src={`${IMG_URL}${movies?.backdrop_path}`}
+				src={`${IMG_URL}${movies?.backdrop_path || movies?.poster_path}`}
 				alt=""
 			/>
 			<div className="banner__cnts--container">

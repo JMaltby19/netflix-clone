@@ -69,7 +69,7 @@ export const useClickOutside = (handler) => {
 
 	useEffect(() => {
 		const clickHandler = (e) => {
-			if (!clickRef.current.contains(e.target)) {
+			if (!clickRef.current?.contains(e.target)) {
 				handler();
 			}
 		};
@@ -78,6 +78,6 @@ export const useClickOutside = (handler) => {
 		return () => {
 			document.removeEventListener("mousedown", clickHandler);
 		};
-	});
+	}, [handler]);
 	return clickRef;
 };

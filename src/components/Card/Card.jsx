@@ -25,7 +25,7 @@ export const Card = ({ movie, largePoster, favourites, setFavourites }) => {
 	const addFavouriteMovie = (movie) => {
 		if (
 			favourites.some((item) => {
-				return movie.name === item.name;
+				return movie.id === item.id;
 			})
 		) {
 			return;
@@ -52,10 +52,30 @@ export const Card = ({ movie, largePoster, favourites, setFavourites }) => {
 		setSelectedId(false);
 	});
 
+	const buttonHandler = (movie) => {
+		if (favourites) {
+			return (
+				<FontAwesomeIcon
+					className="add__btn"
+					icon={faPlusCircle}
+					// style={{ width: "2em" }}
+					onClick={() => addFavouriteMovie(movie)}
+				/>
+			);
+		} else {
+			<FontAwesomeIcon
+				className="remove__btn"
+				icon={faMinusCircle}
+				// style={{ width: "2em" }}
+				onClick={() => removeFavouriteMovie(movie)}
+			/>;
+		}
+	};
+
 	return (
 		<div>
 			<div
-				layoutId={movie.id}
+				// layoutId={movie.id}
 				onClick={() => cardClicked(movie.id)}
 				className={`card__slider ${largePoster && "card__sliderLarge"}`}
 			>
@@ -78,22 +98,25 @@ export const Card = ({ movie, largePoster, favourites, setFavourites }) => {
 							inverse
 							onClick={() => setSelectedId(false)}
 						/>
-						<motion.div>
+						<motion.div className="add__toList">
 							<FontAwesomeIcon
 								className="add__btn"
 								icon={faPlusCircle}
 								// style={{ width: "2em" }}
 								onClick={() => addFavouriteMovie(movie)}
 							/>
+							My list
 						</motion.div>
-						<motion.div>
+						<motion.div className="remove__fromList">
 							<FontAwesomeIcon
 								className="remove__btn"
 								icon={faMinusCircle}
 								// style={{ width: "2em" }}
 								onClick={() => removeFavouriteMovie(movie)}
 							/>
+							Remove
 						</motion.div>
+						{/* <motion.div>{buttonHandler()}</motion.div> */}
 						<motion.div
 							className="card__img"
 							style={{

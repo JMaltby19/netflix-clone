@@ -2,8 +2,8 @@
 export const BASE_URL = "https://api.themoviedb.org/3";
 export const API_KEY = process.env.REACT_APP_API_KEY;
 export const IMG_URL = "https://image.tmdb.org/t/p/original/";
-export const API_URL = "http://localhost:6001";
-// export const API_URL = "https://api.my-netflix-clone.co.uk";
+// export const API_URL = "http://localhost:6001";
+export const API_URL = "https://api.my-netflix-clone.co.uk";
 
 export const requests = {
 	Netflix: {
@@ -12,7 +12,7 @@ export const requests = {
 	},
 	Popular: {
 		title: "Popular",
-		url: `${BASE_URL}/discover/movie/?api_key=${API_KEY}&language=en-US&page=1`,
+		url: `${BASE_URL}/discover/movie?api_key=${API_KEY}&language=en-US&page=1`,
 	},
 	Trending: {
 		title: "Trending",
@@ -20,43 +20,43 @@ export const requests = {
 	},
 	TopRated: {
 		title: "Top Rated",
-		url: `${BASE_URL}/movie/top_rated/?api_key=${API_KEY}&language=en-US`,
+		url: `${BASE_URL}/movie/top_rated?api_key=${API_KEY}&language=en-US`,
 	},
 	Action: {
 		title: "Action",
-		url: `${BASE_URL}/discover/movie/?api_key=${API_KEY}&with_genres=28`,
+		url: `${BASE_URL}/discover/movie?api_key=${API_KEY}&with_genres=28`,
 	},
 	Comedy: {
 		title: "Comedy",
-		url: `${BASE_URL}/discover/movie/?api_key=${API_KEY}&with_genres=35`,
+		url: `${BASE_URL}/discover/movie?api_key=${API_KEY}&with_genres=35`,
 	},
 	Horror: {
 		title: "Horror",
-		url: `${BASE_URL}/discover/movie/?api_key=${API_KEY}&with_genres=27`,
+		url: `${BASE_URL}/discover/movie?api_key=${API_KEY}&with_genres=27`,
 	},
 	Documentaries: {
 		title: "Documentaries",
-		url: `${BASE_URL}/discover/movie/?api_key=${API_KEY}&with_genres=99`,
+		url: `${BASE_URL}/discover/movie?api_key=${API_KEY}&with_genres=99`,
 	},
 	Romance: {
 		title: "Romance",
-		url: `${BASE_URL}/discover/movie/?api_key=${API_KEY}&with_genres=10749`,
+		url: `${BASE_URL}/discover/movie?api_key=${API_KEY}&with_genres=10749`,
 	},
 	Music: {
 		title: "Music",
-		url: `${BASE_URL}/discover/movie/?api_key=${API_KEY}&with_genres=10402`,
+		url: `${BASE_URL}/discover/movie?api_key=${API_KEY}&with_genres=10402`,
 	},
 	Thriller: {
 		title: "Thriller",
-		url: `${BASE_URL}/discover/movie/?api_key=${API_KEY}&with_genres=53`,
+		url: `${BASE_URL}/discover/movie?api_key=${API_KEY}&with_genres=53`,
 	},
 	Fantasy: {
 		title: "Fantasy",
-		url: `${BASE_URL}/discover/movie/?api_key=${API_KEY}&with_genres=14`,
+		url: `${BASE_URL}/discover/movie?api_key=${API_KEY}&with_genres=14`,
 	},
 	Animation: {
 		title: "Animation",
-		url: `${BASE_URL}/discover/movie/?api_key=${API_KEY}&with_genres=16`,
+		url: `${BASE_URL}/discover/movie?api_key=${API_KEY}&with_genres=16`,
 	},
 };
 

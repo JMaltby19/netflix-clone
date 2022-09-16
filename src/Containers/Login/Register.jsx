@@ -3,7 +3,7 @@ import "../../styles/signin.scss";
 import { Signup } from "./Signup";
 import { Login } from "./Login";
 
-export const Signin = () => {
+export const Register = () => {
 	const [signUp, setSignUp] = useState(false);
 
 	return (
