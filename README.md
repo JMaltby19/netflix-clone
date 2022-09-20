@@ -17,4 +17,4 @@ Take a look around - [My Netflix Clone](https://my-netflix-clone.co.uk)
 * REST API's - gathering and structuring API routes, then calling using axios 
 * Node.js & Express - building routes and connecting to a database
 * MySQL - building a database 
-Github - Adding and modifying a repo
+* Github - Adding and modifying a repo
