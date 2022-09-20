@@ -1,70 +1,20 @@
-# Getting Started with Create React App
+# My Netflix Clone!
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is my first full stack project, created useing React, React Router & REST API's. The backend (separate repo) uses node.js, express and MySQL for the database. User's can sign up (or sign in as a guest) browse through their favourite movies and films, saving them to their watch list. If they have signed up they can modify their credentials should they choose to do so.
+A few improvements to be made, but overall happy with how it's turned out and most importantly it was fun to make!
 
-## Available Scripts
+Take a look around - [My Netflix Clone](https://my-netflix-clone.co.uk)
 
-In the project directory, you can run:
+# Screenshot
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+<img width="1431" alt="Screenshot 2022-08-26 at 13 00 32" src="https://user-images.githubusercontent.com/71045580/191341791-45192a79-2c6f-4d23-a241-bdcf55e9b88d.png">
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+# Things Learned
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+* React hooks, components
+* React Router - had a few implementing issues implementing the search box and navbar (originally children in each component) so had to find a way to only render on certain pages uses Router
+* REST API's - gathering and structuring API routes, then calling using axios 
+* Node.js & Express - building routes and connecting to a database
+* MySQL - building a database 
+Github - Adding and modifying a repo
