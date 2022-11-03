@@ -5,10 +5,13 @@ A few improvements to be made, but overall happy with how it's turned out and mo
 
 Take a look around - [My Netflix Clone](https://flix-project.co.uk)
 
-# Screenshot
+# Screenshots
 
 
 <img width="1431" alt="Screenshot 2022-08-26 at 13 00 32" src="https://user-images.githubusercontent.com/71045580/191341791-45192a79-2c6f-4d23-a241-bdcf55e9b88d.png">
+<img width="1423" alt="image" src="https://user-images.githubusercontent.com/71045580/199751456-43749e00-55e6-4e5f-a407-30422745cb4e.png">
+
+
 
 # Things Learned
 
