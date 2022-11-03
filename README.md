@@ -1,6 +1,6 @@
 # My Netflix Clone!
 
-This is my first full stack project, created useing React, React Router & REST API's. The backend (separate repo) uses node.js, express and MySQL for the database. User's can sign up (or sign in as a guest) browse through their favourite movies and films, saving them to their watch list. If they have signed up they can modify their credentials should they choose to do so.
+This is my first full stack project, created using React, React Router & REST API's. The backend (separate repo) uses node.js, express and MySQL for the database. User's can sign up (or sign in as a guest) browse through their favourite movies and films, saving them to their watch list. If they have signed up they can modify their credentials should they choose to do so.
 A few improvements to be made, but overall happy with how it's turned out and most importantly it was fun to make!
 
 Take a look around - [My Netflix Clone](https://flix-project.co.uk)
